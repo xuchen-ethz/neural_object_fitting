@@ -54,7 +54,7 @@ python nocs/eval.py
 This should produce similar results to [this one](https://dataset.ait.ethz.ch/downloads/IJNQ4hZGrB/results.pkl). Note that there might be a small variance due to the randomness of initialization.
 
 # Training
-Run the following command to train the model for laptop category. Modify `--category` to train models for other categories.
+Run the following command to train the model for laptop category. Modify `--category` to train models for other categories. Each of the provided checkpoints was trained for 24h on a single 1080Ti GPU.
 
 ```
 python train.py --config configs/config.yaml --category laptop
