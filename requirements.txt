@@ -1,0 +1,11 @@
+pyyaml==5.4.1
+opencv-python==4.2.0.34
+envyaml==0.1912
+scipy==1.2.1
+h5py==2.8.0
+imageio==2.9.0
+matplotlib==3.4.1
+moviepy
+wandb
+tqdm
+

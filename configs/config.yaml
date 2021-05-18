@@ -1,0 +1,48 @@
+basic:
+  checkpoints_dir: ./checkpoints
+  dataroot: ./datasets/train
+  gpu_ids: '0'
+  project_name: neural_object_fitting
+data:
+  batch_size: 256
+  crop_size: 64
+  dataset_mode: nocs_hdf5
+  load_size: 64
+  max_dataset_size: .inf
+  no_flip: true
+  num_threads: 0
+  preprocess: resize_and_crop
+  serial_batches: false
+models:
+  batch_size_vis: 8
+  lambda_KL: 0.01
+  lambda_recon: 10.0
+  use_VAE: true
+  z_dim: 16
+log:
+  display_freq: 102400
+  print_freq: 1
+misc:
+  load_suffix: latest
+  verbose: false
+  visualizers:
+  - terminal
+  - wandb
+model:
+  init_gain: 0.02
+  init_type: normal
+  input_nc: 3
+  model: latent_object
+  output_nc: 3
+save:
+  epoch_count: 1
+  save_by_iter: false
+  save_epoch_freq: 5
+  save_latest_freq: 102400
+train:
+  lr: 0.003
+  lr_decay_iters: 50
+  lr_policy: linear
+  n_views: 2592
+  niter: 100
+  niter_decay: 100

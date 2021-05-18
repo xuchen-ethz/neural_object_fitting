@@ -1,0 +1,32 @@
+basic:
+  checkpoints_dir: ./checkpoints
+  dataroot: ./datasets/test
+  gpu_ids: '0'
+  project_name: neural_object_fitting
+  run_name: fitting
+fitting:
+  lambda_reg: 1
+  n_init: 32
+  n_iter: 50
+misc:
+  load_suffix: latest
+  verbose: false
+  visualizers:
+  - terminal
+  - wandb
+model:
+  init_gain: 0.02
+  init_type: normal
+  input_nc: 3
+  model: latent_object
+  output_nc: 3
+models:
+  batch_size_vis: 8
+  use_VAE: true
+  z_dim: 16
+test:
+  target_size: 64
+  num_agent: 1
+  id_agent: 0
+  results_dir: ./results
+  skip: 1

@@ -1,0 +1,12 @@
+checkpoints
+datasets
+results
+wandb
+.vscode
+
+**.pyc
+**/__pycache__/
+/.idea/
+**.npy
+**.pkl
+**.csv
